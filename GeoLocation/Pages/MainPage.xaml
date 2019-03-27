@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GeoLocation"
+             x:Class="GeoLocation.Pages.MainPage">
+
+    <StackLayout Margin="10,0,10,0" Padding="0" Spacing="0">
+        <Button Text="START" x:Name="BtnStartLocationPolling" Clicked="BtnStartLocationPolling_OnClicked"/>
+        <Button Text="STOP" x:Name="BtnStopLocationPolling" Clicked="BtnStopLocationPolling_OnClicked"/>
+        <Label Text="" x:Name="LblLocation" />
+        <Label Text="" x:Name="LblZone" BackgroundColor="Gray" VerticalOptions="FillAndExpand" />
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="Blue">
+            <Stepper x:Name="StpBlue" BackgroundColor="Blue" Maximum="300" Minimum="10" Increment="5" ValueChanged="StpBlue_OnValueChanged" />
+            <Label Text="" x:Name="LblBlueRadius" TextColor="White" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="24" FontAttributes="Bold"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="Red">
+            <Stepper x:Name="StpRed" BackgroundColor="Red" Maximum="300" Minimum="5" Increment="5" ValueChanged="StpRed_OnValueChanged"/>
+            <Label Text="" x:Name="LblRedRadius" TextColor="White" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="24" FontAttributes="Bold"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="Green">
+            <Stepper x:Name="StpGreen" BackgroundColor="Green" Maximum="300" Minimum="10" Increment="5" ValueChanged="StpGreen_OnValueChanged" />
+            <Label Text="" x:Name="LblGreenRadius" TextColor="White" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="24" FontAttributes="Bold"/>
+        </StackLayout>
+        <Slider x:Name="SldOffset" ThumbColor="DimGray" HorizontalOptions="FillAndExpand"  Minimum="-10" Maximum="10" Value="0" ValueChanged="Slider_OnValueChanged" />
+        <Slider x:Name="SldPollInterval" ThumbColor="purple" MinimumTrackColor="Indigo"  MaximumTrackColor="Violet"  HorizontalOptions="FillAndExpand"  Minimum="0" Maximum="11" Value="3" ValueChanged="SldPollInterval_OnValueChanged" />
+    </StackLayout>
+
+</ContentPage>
